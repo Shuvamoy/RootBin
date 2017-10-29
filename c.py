@@ -7,7 +7,7 @@ import os
 import sys
  
 if not os.getegid() == 0:
-sys.exit('Script must be run as root')
+ sys.exit('Script must be run as root')
  
  
 from time import sleep
@@ -28,26 +28,26 @@ led2 = port.PA6
  
 gpio.init()
 gpio.setcfg(led, gpio.OUTPUT)
-gpio.setcfg(led1, gpio.OUTPUT)
-gpio.setcfg(led2, gpio.OUTPUT)
+#gpio.setcfg(led1, gpio.OUTPUT)
+#gpio.setcfg(led2, gpio.OUTPUT)
  
 try:
     print ("Press CTRL+C to exit")
     while True:
         gpio.output(led, 1)
-        sleep(0.1)
-        gpio.output(led, 0)
-        sleep(0.6)
+#        sleep(0.1)
+       # gpio.output(led, 0)
+        #sleep(0.6)
  
-        gpio.output(led1, 1)
-        sleep(0.1)
-        gpio.output(led1, 0)
-        sleep(0.6)
+       # gpio.output(led1, 1)
+       # sleep(0.1)
+        #gpio.output(led1, 0)
+       # sleep(0.6)
  
-        gpio.output(led2, 1)
-        sleep(0.1)
-        gpio.output(led2, 0)
-        sleep(0.6)
+        #gpio.output(led2, 1)
+        #sleep(0.1)
+        #gpio.output(led2, 0)
+        #sleep(0.6)
  
 except KeyboardInterrupt:
     print ("Goodbye.")
