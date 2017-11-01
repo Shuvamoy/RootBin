@@ -1,0 +1,2 @@
+ExecStart=/sbin/runuser -l firefart -c "/usr/bin/vncserver %i"
+PIDFile=/home/firefart/.vnc/%H%i.pid
