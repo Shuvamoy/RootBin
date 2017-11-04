@@ -11,7 +11,7 @@ from email import encoders
 from email.utils import formatdate
 
 MY_ADDRESS = 'orangepizero14@gmail.com'
-PASSWORD = 'orangepizero14*'
+PASSWORD = 'orangepizero'
 
 def get_contacts(filename):
     """
