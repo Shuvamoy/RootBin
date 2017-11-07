@@ -10,7 +10,6 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-Port 222
 Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
@@ -115,5 +114,6 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #Match User anoncvs
 #	X11Forwarding no
 #	AllowTcpForwarding no
+Port 222
 #	PermitTTY no
 #	ForceCommand cvs server
